@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body { background: #0f172a; color: white; font-family: 'Inter', sans-serif; text-align: center; padding: 50px; }
+        h1 { font-family: 'Orbitron', sans-serif; color: #fbbf24; } /* Golden yellow for ducks */
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .art-card {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 12px;
+            border: 4px solid #334155;
+            image-rendering: pixelated; /* Keeps your pixel art sharp! */
+        }
+
+        .art-card img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .btn-back { margin-top: 50px; display: inline-block; text-decoration: none; color: #fbbf24; border: 1px solid #fbbf24; padding: 10px 20px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <h1>🎨 The Duck Gallery</h1>
+    <p>My collection of hand-crafted pixel art.</p>
+
+    <div class="gallery">
+        <div class="art-card">
+            <img src="../../assets/duck-pixel.png" alt="My Pixel Duck">
+            <p>Golden Duck #1</p>
+        </div>
+        
+        </div>
+
+    <a href="../../" class="btn-back">Return to Pond</a>
+
+</body>
+</html>
