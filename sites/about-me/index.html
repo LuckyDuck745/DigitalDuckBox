@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | DigitalDuckBox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: rgba(255, 255, 255, 0.05);
+            --text: #f1f5f9;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: var(--card);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 24px;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .duck-logo { font-size: 50px; margin-bottom: 10px; }
+        h1 { font-family: 'Orbitron', sans-serif; color: var(--accent); margin-bottom: 0.5rem; font-size: 1.8rem; }
+        p { line-height: 1.6; opacity: 0.8; margin-bottom: 1.5rem; }
+
+        .tag-container { margin-bottom: 2rem; }
+        .tag {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin: 5px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--bg);
+            background: var(--accent);
+            padding: 12px 25px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 15px -3px rgba(56, 189, 248, 0.4); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="duck-logo">🦆</div>
+        <h1>About Me</h1>
+        <p>Welcome to the DigitalDuckBox. I'm a developer building games, websites, and cool digital stuff.</p>
+        
+        <div class="tag-container">
+            <span class="tag">Web Dev</span>
+            <span class="tag">Game Design</span>
+            <span class="tag">Digital Creator</span>
+        </div>
+
+        <a href="../index.html" class="btn">Back to Directory</a>
+    </div>
+
+</body>
+</html>
