@@ -1,0 +1,34 @@
+# --- OS Files (The "invisible" junk) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+desktop.ini
+
+# --- Web Development (Sites & Apps) ---
+node_modules/
+.npm
+package-lock.json
+dist/
+build/
+.env
+.env.local
+
+# --- Game Dev (General Engine Folders) ---
+# Ignores large temp files from Unity, Godot, or Unreal
+[Log]s/
+[Tt]emp/
+[Bb]in/
+[Oo]bj/
+[Ll]ibrary/
+
+# --- Editors & IDEs ---
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+
+# --- Miscellaneous ---
+*.log
+.cache/
