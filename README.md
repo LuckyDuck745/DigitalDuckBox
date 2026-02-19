@@ -1,27 +1,35 @@
 # 🦆 DigitalDuckBox
 
-Welcome to my digital workshop! This is a "catch-all" repository for my web projects, games, and daily progress logs.
+> "A place for all my digital ducklings to grow." 🏗️
+
+Welcome to the **DigitalDuckBox**! This is a centralized hub for my web experiments, mini-games, and technical logs. Everything here is built with 💛 and a bit of "quack."
 
 ---
 
-## 🗺️ Navigation
-* 🌐 [**Web Sites**](./sites/) — My portfolio and info pages.
-* 🎮 [**Games**](./games/) — Playable browser-based games.
-* 💻 [**Projects**](./projects/) — Source code and scripts.
-* 📝 [**Dev Logs**](./docs/) — Notes on what I'm learning.
+## 🌊 Navigate the Pond
+
+| Folder | What's Inside? | Link |
+| :--- | :--- | :--- |
+| 🌐 | **Web Sites** | [Visit Sites](./sites/) |
+| 🎮 | **Mini Games** | [Play Games](./games/) |
+| 💻 | **Projects** | [View Code](./projects/) |
+| 📝 | **Dev Logs** | [Read Logs](./docs/LOGBOOK.md) |
 
 ---
 
-## 🚧 What I'm Working On
-> **Current Status:** Building out the core structure of the DuckBox! 🏗️
-
-- [x] Create repository structure
-- [x] Set up `.gitignore`
-- [ ] Upload first mini-game
-- [ ] Finish "About Me" site
+## 🐣 Current Ducklings (What I'm Working On)
+* **The Hub:** Organizing this repository and setting up the directory.
+* **About Me:** Fine-tuning my [About Me](./sites/about-me/index.html) page.
+* **Next Up:** Planting the first game in the `/games` folder.
 
 ---
 
-## 📫 Connect
-* **GitHub:** [@your-username]
-* **Mood:** 🐥 Feeling productive!
+## 🛠️ The Tech Nest
+I'm currently using these tools to build my pond:
+`HTML5` `CSS3` `JavaScript` `Markdown`
+
+---
+
+## 📫 Quack at Me
+* **GitHub:** [LuckyDuck745]
+* **Status:** 🌊 Just keep swimming.
