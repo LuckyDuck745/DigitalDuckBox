@@ -1,103 +1,32 @@
-<style>
-    /* New Widget Styles */
-    .control-center {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-bottom: 30px;
-    }
-
-    .widget {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid var(--border);
-        padding: 15px;
-        border-radius: 15px;
-        font-size: 0.9rem;
-    }
-
-    #clock {
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1.2rem;
-        color: var(--accent);
-    }
-
-    #quote-display {
-        font-style: italic;
-        font-size: 0.8rem;
-        opacity: 0.8;
-    }
-
-    .greeting-text {
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        display: block;
-        margin-bottom: 5px;
-    }
-</style>
-
-<body>
-    <div class="dashboard">
-        <div class="status-bar">
-            <div class="pulse"></div> <span id="system-status">INITIALIZING...</span>
-        </div>
-        
-        <h1 id="greeting">THE POND</h1>
-
-        <div class="control-center">
-            <div class="widget">
-                <span class="greeting-text">System Time</span>
-                <div id="clock">00:00:00</div>
-            </div>
-            <div class="widget">
-                <span class="greeting-text">Duck Wisdom</span>
-                <div id="quote-display">"Quack."</div>
-            </div>
-        </div>
-
-        <div class="grid">
-            <a href="about-me/index.html" class="nav-card">
-                <span class="icon">👤</span>
-                <h3>Identity</h3>
-                <p>User Profile</p>
-            </a>
-            <a href="../games/pixel-gallery/index.html" class="nav-card">
-                <span class="icon">🎨</span>
-                <h3>Gallery</h3>
-                <p>Visual Databank</p>
-            </a>
-            <a href="../index.html" class="nav-card">
-                <span class="icon">🏠</span>
-                <h3>Root</h3>
-                <p>Exit to Main Shell</p>
-            </a>
-        </div>
+<div class="rec-box">
+    <h3>📥 Drop a Recommendation</h3>
+    <p style="font-size: 0.7rem; opacity: 0.6; margin-bottom: 10px;">Suggestions are sent to the GitHub Issue tracker.</p>
+    <div class="input-group">
+        <input type="text" id="user-input" placeholder="What should I add to the Pond?">
+        <button class="btn-send" onclick="sendToGitHub()">QUACK</button>
     </div>
+</div>
 
-    <script>
-        // Feature 1: Live Clock
-        function updateClock() {
-            const now = new Date();
-            document.getElementById('clock').innerText = now.toLocaleTimeString();
+<script>
+    // ... keep your clock and greeting functions ...
+
+    function sendToGitHub() {
+        const input = document.getElementById('user-input');
+        const suggestion = input.value.trim();
+        
+        if (suggestion !== "") {
+            const repoOwner = "LuckyDuck745"; // Your username from the screenshot
+            const repoName = "DigitalDuckBox";
+            
+            // This creates a link that opens a new GitHub issue automatically
+            const title = encodeURIComponent("New Suggestion for the Pond");
+            const body = encodeURIComponent(`I have a suggestion for the DigitalDuckBox:\n\n > ${suggestion}`);
+            const githubUrl = `https://github.com/${repoOwner}/${repoName}/issues/new?title=${title}&body=${body}`;
+            
+            window.open(githubUrl, '_blank');
+            input.value = "";
+        } else {
+            alert("The duck needs a message before it can fly!");
         }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // Feature 2: Time-based Greeting
-        const hours = new Date().getHours();
-        const statusMsg = document.getElementById('system-status');
-        if (hours < 12) statusMsg.innerText = "GOOD MORNING, PILOT";
-        else if (hours < 18) statusMsg.innerText = "SYSTEM ACTIVE: AFTERNOON OPS";
-        else statusMsg.innerText = "NIGHT MODE ENABLED";
-
-        // Feature 3: Random Duck Wisdom
-        const quotes = [
-            "Be a duck: calm on the surface, paddling like crazy underneath.",
-            "Life is better at the pond.",
-            "Keep your feathers dry and your goals high.",
-            "Waddle forth and conquer.",
-            "Don't let the rain dampen your quack."
-        ];
-        document.getElementById('quote-display').innerText = `"${quotes[Math.floor(Math.random() * quotes.length)]}"`;
-    </script>
-</body>
+    }
+</script>
