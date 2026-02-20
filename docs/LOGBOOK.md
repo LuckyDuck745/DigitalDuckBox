@@ -1,21 +1,20 @@
 # 🦆 The DuckBox Dev Log
 
-This is where I track what I'm learning, the bugs I've smashed :D, and the ideas I have for the future.
+This is where I track what I'm learning, the bugs I've smashed, and the ideas I have for the future.
 
 ---
 
 ### 📅 February 20, 2026
-**Current Focus:** Advanced UI & Dashboard Features
+**Current Focus:** Interactive UI & System Automation
 
 - **What I did today:**
-    - Upgraded the `/sites/index.html` into a **High-Tech Duck Dashboard**.
-    - Implemented **Glassmorphism** design (frosted glass effect) using CSS `backdrop-filter`.
+    - Upgraded the Dashboard UI with a high-tech "Glassmorphism" look using CSS `backdrop-filter`.
     - Integrated **JavaScript Features**:
-        - A **Live Clock** that updates every second.
-        - A **Dynamic Greeting** that changes based on the time of day.
-        - A **Random Quote Generator** for "Duck Wisdom."
-    - Added a pulsing "System Status" indicator to make the UI feel alive.
-- **Challenges:** Perfecting the CSS Grid layout for the new "Control Center" widgets.
+        - A **Live Clock** and **Dynamic Greeting** based on the time of day.
+        - A **Recommendation Terminal** that allows users to submit ideas directly to GitHub Issues.
+    - **CI/CD Pipeline:** Set up `.github/workflows/main.yml` to automate system health checks.
+    - **Visual Status:** Added a live GitHub Actions status badge to the dashboard to show the build is "passing."
+- **Challenges:** Wiring the "QUACK" button to generate a GitHub Issue URL with pre-filled text.
 
 ---
 
@@ -26,7 +25,7 @@ This is where I track what I'm learning, the bugs I've smashed :D, and the ideas
     - Created the core folder structure (`assets`, `games`, `sites`, `projects`) using the "Slash Trick."
     - Refactored the `/games` folder into a **Pixel Art Gallery**.
     - Built a "Glassmorphism" style **About Me** page in `/sites/about-me/`.
-    - Wrote my first Python projects: `duck_decider.py` (logic) and `duck_pass.py` (security).
+    - Wrote my first Python projects: `duck_decider.py` and `duck_pass.py`.
     - Updated the main `README.md` with a custom **Duck Theme** and navigation table.
 - **Learning:** Mastered relative linking (`../../`) to connect the dashboard to other folders.
 
@@ -40,6 +39,6 @@ This is where I track what I'm learning, the bugs I've smashed :D, and the ideas
 ---
 
 ### 💡 Ideas for the Future
+- [x] Add a Recommendation Box (Completed Feb 20)
 - [ ] Create a "Duck-themed" clicker game.
-- [ ] Add a "Task List" widget to the main dashboard.
-- [ ] Experiment with CSS animations for "floating" duck elements.
+- [ ] Add a dark mode toggle to the dashboard.
