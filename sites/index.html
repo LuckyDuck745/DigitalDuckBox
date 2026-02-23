@@ -31,91 +31,98 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            transition: background-color 0.3s ease;
-            overflow-x: hidden;
+            transition: all 0.5s ease; /* Smooth theme slide */
         }
 
-        /* 1. ENTRANCE ANIMATION */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
         .dashboard {
             position: relative;
             width: 90%;
-            max-width: 800px;
+            max-width: 850px;
             padding: 40px;
             background: var(--glass);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(15px);
             border: 1px solid var(--border);
             border-radius: 32px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             text-align: center;
-            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            animation: fadeInUp 0.8s ease-out;
         }
 
-        /* 2. HOVER EFFECTS */
-        .nav-card, .widget, .rec-box {
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                        box-shadow 0.3s ease, border-color 0.3s ease;
+        .control-center {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .widget {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .widget:hover { transform: scale(1.03); }
+
+        /* TASK LIST STYLE */
+        .task-list {
+            text-align: left;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
+        .task-item { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+        .task-item input { accent-color: var(--accent); }
+
+        /* THE ORIGINAL RECOMMENDATION BOX */
+        .rec-box {
+            background: rgba(56, 189, 248, 0.05);
+            border: 2px dashed var(--accent);
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .nav-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            padding: 15px;
+            border-radius: 18px;
+            text-decoration: none;
+            color: var(--text);
+            transition: 0.3s;
+            font-weight: 600;
         }
 
         .nav-card:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(56, 189, 248, 0.15);
+            transform: translateY(-5px);
+            background: rgba(56, 189, 248, 0.1);
             border-color: var(--accent);
         }
 
-        /* 3. QUACK BUTTON PULSE */
-        @keyframes quackPulse {
-            0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(56, 189, 248, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
-        }
-
-        .btn-send {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-weight: bold;
-            animation: quackPulse 2s infinite;
-            transition: transform 0.2s;
-        }
-
-        .btn-send:active { transform: scale(0.9); }
-
-        /* --- REST OF EXISTING STYLES --- */
         .theme-toggle {
             position: absolute; top: 20px; right: 20px;
             background: var(--glass); border: 1px solid var(--border);
             color: var(--text); padding: 10px; border-radius: 50%;
-            cursor: pointer; font-size: 1.2rem; transition: 0.3s;
+            cursor: pointer;
         }
 
-        h1 {
-            font-family: 'Orbitron', sans-serif; font-size: 2.5rem;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-
-        .status-bar {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(56, 189, 248, 0.1); padding: 5px 15px;
-            border-radius: 20px; font-size: 0.8rem; color: var(--accent); margin-bottom: 20px;
-        }
-
-        .control-center { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px; }
-        .widget { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); padding: 15px; border-radius: 15px; }
-        #clock { font-family: 'Orbitron', sans-serif; font-size: 1.2rem; color: var(--accent); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .nav-card { background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border); padding: 20px; border-radius: 20px; text-decoration: none; color: var(--text); }
-        .rec-box { background: rgba(56, 189, 248, 0.05); border: 1px solid var(--accent); padding: 20px; border-radius: 20px; margin-top: 30px; text-align: left; }
-        .input-group { display: flex; gap: 10px; margin-top: 10px; }
-        input[type="text"] { flex-grow: 1; background: rgba(255, 255, 255, 0.1); border: 1px solid var(--border); padding: 10px; border-radius: 10px; color: var(--text); }
+        h1 { font-family: 'Orbitron'; background: linear-gradient(to right, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .btn-send { background: var(--accent); color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -123,21 +130,26 @@
     <div class="dashboard">
         <button class="theme-toggle" onclick="toggleTheme()" id="theme-btn">🌙</button>
 
-        <div class="status-bar">
-            <span id="system-status">SYSTEM ACTIVE</span>
-            <img src="https://github.com/LuckyDuck745/DigitalDuckBox/actions/workflows/main.yml/badge.svg" alt="Status" style="height:18px;">
-        </div>
-        
+        <div style="font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 10px;">CORE INTERFACE v2.1</div>
         <h1>THE POND</h1>
 
         <div class="control-center">
             <div class="widget">
-                <div style="font-size: 0.7rem; opacity: 0.6;">TIME</div>
-                <div id="clock">00:00:00</div>
+                <div style="font-size: 0.6rem; opacity: 0.6;">SYSTEM CLOCK</div>
+                <div id="clock" style="font-family: 'Orbitron'; color: var(--accent);">00:00:00</div>
             </div>
             <div class="widget">
-                <div style="font-size: 0.7rem; opacity: 0.6;">WISDOM</div>
-                <div id="quote">"Quack."</div>
+                <div style="font-size: 0.6rem; opacity: 0.6;">CURRENT GOALS</div>
+                <div class="task-list">
+                    <div class="task-item"><input type="checkbox" checked> UI Animations</div>
+                    <div class="task-item"><input type="checkbox"> Python Scripts</div>
+                </div>
+            </div>
+            <div class="widget">
+                <div style="font-size: 0.6rem; opacity: 0.6;">DUCK POWER</div>
+                <div style="height: 10px; background: rgba(255,255,255,0.1); border-radius: 5px; margin-top: 8px;">
+                    <div style="width: 85%; height: 100%; background: var(--accent); border-radius: 5px;"></div>
+                </div>
             </div>
         </div>
 
@@ -149,18 +161,16 @@
         </div>
 
         <div class="rec-box">
-            <h3 style="margin:0; font-size: 0.8rem; font-family: 'Orbitron';">📥 RECOMMENDATIONS</h3>
-            <div class="input-group">
-                <input type="text" id="user-input" placeholder="Any ideas?">
+            <h3 style="margin:0; font-size: 0.9rem; font-family: 'Orbitron';">📥 RECOMMENDATIONS</h3>
+            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                <input type="text" id="user-input" placeholder="Idea for the box?" style="flex-grow: 1; background: rgba(255,255,255,0.1); border: 1px solid var(--border); padding: 10px; border-radius: 10px; color: var(--text);">
                 <button class="btn-send" onclick="sendToGitHub()">QUACK</button>
             </div>
         </div>
     </div>
 
     <script>
-        function updateClock() {
-            document.getElementById('clock').innerText = new Date().toLocaleTimeString();
-        }
+        function updateClock() { document.getElementById('clock').innerText = new Date().toLocaleTimeString(); }
         setInterval(updateClock, 1000); updateClock();
 
         function toggleTheme() {
@@ -177,9 +187,7 @@
 
         function sendToGitHub() {
             const val = document.getElementById('user-input').value;
-            if (val) {
-                window.open(`https://github.com/LuckyDuck745/DigitalDuckBox/issues/new?title=Suggestion&body=${encodeURIComponent(val)}`, '_blank');
-            }
+            if (val) window.open(`https://github.com/LuckyDuck745/DigitalDuckBox/issues/new?title=Suggestion&body=${encodeURIComponent(val)}`, '_blank');
         }
     </script>
 </body>
