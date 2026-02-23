@@ -1,19 +1,17 @@
 # 🦆 The DuckBox Dev Log
 
-This is where I track what I'm learning, the bugs I've smashed, and the ideas I have for the future.
-
 ---
 
-### 📅 February 20, 2026
-**Current Focus:** Visual Polish & Python Tooling
+### 📅 February 23, 2026
+**Current Focus:** Dashbord Expansion & Power Tools
 
 - **What I did today:**
-    - Upgraded the Dashboard UI with **CSS Animations**: Added a fade-in for the page and a "float" effect when hovering over cards.
-    - **New Projects Added:** - Created `duck_converter.py` for unit conversions.
-        - Created `system_check.py` for simulated diagnostics.
-    - **Add a Recommendation Box:** Linked a button to GitHub Issues so people can send in ideas.
-    - **Bug Fix:** Fixed the 404 errors by using `../projects/` to link the Python files correctly.
-    - **CI/CD:** Set up the GitHub Actions "Quack Check" to watch the repo.
+    - Upgraded the Dashboard with a **Task List** and **Duck-Power Monitor**.
+    - Enhanced the **Dark/Light Mode** with smoother transitions.
+    - Added **CSS Animations** (fadeInUp and hover scaling) to all main cards.
+    - **New Projects Added:** Created `duck_converter.py` and `system_check.py`.
+    - **Add a Recommendation Box:** Linked a button to GitHub Issues for easy suggestion tracking.
+    - **Bug Fix:** Fixed 404 errors by correcting relative paths to the `/projects` folder.
 
 ---
 
@@ -25,20 +23,9 @@ This is where I track what I'm learning, the bugs I've smashed, and the ideas I 
     - Refactored the `/games` folder into a **Pixel Art Gallery**.
     - Built a "Glassmorphism" style **About Me** page in `/sites/about-me/`.
     - Wrote my first Python projects: `duck_decider.py` and `duck_pass.py`.
-    - Updated the main `README.md` with a custom **Duck Theme** and navigation table.
 - **Learning:** Mastered relative linking (`../../`) to connect the dashboard to other folders.
 
 ---
 
 ### 📅 February 18, 2026
-**Current Focus:** Initial Architecture
-
 - **What I did today:** Started the DigitalDuckBox repository and mapped out the vision for the "Pond."
-
----
-
-### 💡 Ideas for the Future
-- [x] Add a Recommendation Box (Completed Feb 20)
-- [x] Add a Dark Mode toggle (Completed Feb 20)
-- [ ] Create a "Duck-themed" clicker game.
-- [ ] Add a "Task List" widget to the dashboard.
